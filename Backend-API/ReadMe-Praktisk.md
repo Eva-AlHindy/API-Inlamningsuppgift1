@@ -2,7 +2,8 @@
 
 ## Praktisk del
 
-Du ska ta fram backend för den nya läroplatformen BongBong. Det första steget är att kunna hantera studenter. Utgå från valfri exempelkod som tillhandahållits under kursens gång.
+Du ska ta fram backend för den nya läroplatformen BongBong. Det första steget är att kunna hantera studenter.
+Utgå från valfri exempelkod som tillhandahållits under kursens gång.
 
 I ett gitrepo ska det finnas ett API skrivet i node/express som sparar informationen i en mongodatabas.
 
@@ -134,7 +135,8 @@ $ curl -i -X PUT localhost:2000/students/5ced2f96f9560949acc0193b -H "Content-Ty
 
   {"address":{"gata":"Put NyGata","postnummer":12345,"ort":"Monaco"},"_id":"5ced2f96f9560949acc0193b","email":"fabregas@hotmail.com","name":"Jennie","__v":0}
 ```
-Id:t till nedanstående kod fanns inte från början eftersom vi deleteat den. För att 'upsert' (skapa ny i metoden PUT) ska funka måste id likna formatet: 5ced2f96f9560949acc0193b men vara unikt och inte existera i databasen.
+Id:t till nedanstående kod fanns inte från början eftersom vi deleteat den.
+För att 'upsert' (skapa ny i metoden PUT) ska funka måste id likna formatet: 5ced2f96f9560949acc0193b men vara unikt och inte existera i databasen.
 ```
 $ curl -i -X PUT localhost:2000/students/5ced2f96f9560949acc0193b -H "Content-Type: application/json; charset=utf-8" -d
  '{
